@@ -28,7 +28,6 @@ resource "aws_iam_role_policy_attachment" "eks-service" {
 }
 
 # EKS node
-
 resource "aws_iam_role" "eks-node" {
   name = "eks-node-role"
   assume_role_policy = <<POLICY
