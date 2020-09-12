@@ -23,8 +23,8 @@ users:
       args:
         - "eks"
         - "get-token"
-        - "--cluster_name"
-        - ${local.cluster_name}
+        - "--cluster-name"
+        - "${local.cluster_name}"
 CONFIG
 
   eks_configmap = <<CONFIGMAP
