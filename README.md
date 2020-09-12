@@ -1,7 +1,7 @@
 # tf-eks-base
 
 ## Dependencies
-- Terraform (Used `v0.13.*`)
+- Terraform (`v0.13.*`)
 
 ## Usage
 ```
