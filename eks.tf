@@ -5,7 +5,7 @@ resource "aws_eks_cluster" "cluster" {
 
   vpc_config {
     security_group_ids = [aws_security_group.eks-master.id]
-    subnet_ids = [aws_subnet.subnet.*.id]
+    subnet_ids = aws_subnet.subnet.*.id
   }
 
   depends_on = [
@@ -61,7 +61,7 @@ resource "aws_autoscaling_group" "asg" {
   launch_configuration = aws_launch_configuration.lc.id
   max_size = var.asg_max_size
   min_size = var.asg_min_size
-  vpc_zone_identifier = [aws_subnet.subnet.*.id]
+  vpc_zone_identifier = aws_subnet.subnet.*.id
 
   tag {
     key = "Name"
