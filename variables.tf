@@ -18,6 +18,26 @@ variable "subnet_count" {
   default = 2
 }
 
+variable "instance_type" {
+  default = "t2.small"
+}
+
+variable "key_name" {
+  default = "tf-eks-base-key"
+}
+
+variable "asg_desired_capacity" {
+  default = 2
+}
+
+variable "asg_max_size" {
+  default = 2
+}
+
+variable "asg_min_size" {
+  default = 2
+}
+
 locals {
   base_tags = {
     Project = var.project
