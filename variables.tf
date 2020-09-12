@@ -23,7 +23,8 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-  default = "tf-eks-base-key"
+  # Override
+  default = "YOUR KEY NAME"
 }
 
 variable "asg_desired_capacity" {
