@@ -1,8 +1,8 @@
 # tf-eks-base
 
 ## Dependencies
-- kubectl
-- AWS command
+- AWS command (`v1.18.*`)
+- kubectl (`v1.17.*`)
 - Terraform (`v0.13.*`)
 
 ## Creating EKS base
