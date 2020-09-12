@@ -19,10 +19,11 @@ users:
   user:
     exec:
       apiVersion: client.authentication.k8s.io/v1alpha1
-      command: aws-iam-authenticator
+      command: aws
       args:
-        - "token"
-        - "-1"
+        - "eks"
+        - "get-token"
+        - "--cluster_name"
         - ${local.cluster_name}
 CONFIG
 
