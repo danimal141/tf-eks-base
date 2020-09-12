@@ -5,7 +5,7 @@
 - kubectl (`v1.17.*`)
 - Terraform (`v0.13.*`)
 
-## Creating EKS base
+## Create EKS base
 
 ```bash
 // Initialize working dir
@@ -21,7 +21,7 @@ $ terraform apply -var 'key_name=YOUR KEY NAME'
 $ terraform destroy
 ```
 
-## To recognize nodes
+## Recognize nodes
 
 ```bash
 $ mkdir -p .kube
