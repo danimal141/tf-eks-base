@@ -8,6 +8,7 @@ resource "aws_eks_cluster" "cluster" {
     subnet_ids = aws_subnet.subnet.*.id
   }
 
+  # To ensure IAM policies are created before
   depends_on = [
     aws_iam_role_policy_attachment.eks-cluster,
     aws_iam_role_policy_attachment.eks-service
