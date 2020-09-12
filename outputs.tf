@@ -36,7 +36,7 @@ metadata:
 data:
   mapRoles: |
     - rolearn: ${aws_iam_role.eks-node.arn}
-      username: system:node{{EC2PrivateDNSName}}
+      username: system:node:{{EC2PrivateDNSName}}
       groups:
         - system:bootstrappers
         - system:nodes
