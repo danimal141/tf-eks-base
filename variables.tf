@@ -25,7 +25,7 @@ variable "instance_type" {
 variable "key_name" {
   # Override
   # Key name for EC2 instances
-  # Can check `aws ec2 describe-key-pairs`
+  # Can find the existent key names from `aws ec2 describe-key-pairs`
   default = "YOUR KEY NAME"
 }
 
