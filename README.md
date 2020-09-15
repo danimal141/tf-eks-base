@@ -28,6 +28,11 @@ $ mkdir -p .kube
 $ mkdir -p manifests
 
 $ terraform output kubectl_config > .kube/config
+or
+$ aws eks update-kubeconfig --name ${cluster_name}
+
+// If using IAM users or roles other than the cluster creator, need to modify the access
+// https://aws.amazon.com/jp/premiumsupport/knowledge-center/amazon-eks-cluster-access/
 $ terraform output eks_configmap > ./manifests/config_map.yml
 
 $ export KUBECONFIG='.kube/config'
