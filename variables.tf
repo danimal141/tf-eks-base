@@ -26,7 +26,6 @@ variable "key_name" {
   # Override
   # Key name for EC2 instances
   # Can find the existent key names from `aws ec2 describe-key-pairs`
-  default = "YOUR KEY NAME"
 }
 
 variable "asg_desired_capacity" {
