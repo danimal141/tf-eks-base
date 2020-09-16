@@ -27,7 +27,7 @@ users:
         - "${local.cluster_name}"
 CONFIG
 
-  eks_configmap = <<CONFIGMAP
+  awsauth = <<CONFIGMAP
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -47,6 +47,6 @@ output "kubectl_config" {
   value = local.kubeconfig
 }
 
-output "eks_configmap" {
-  value = local.eks_configmap
+output "aws_auth_configmap" {
+  value = local.awsauth
 }

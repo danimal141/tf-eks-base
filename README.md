@@ -1,5 +1,9 @@
 # tf-eks-base
 
+This provides a way to create an EKS base environment using Terraform.
+
+This supports creating only public subnets. Please be careful.
+
 ## Dependencies
 - AWS command (`v1.18.*`)
 - kubectl (`v1.17.*`)
@@ -32,10 +36,10 @@ or
 $ aws eks update-kubeconfig --name ${cluster_name}
 
 // Refer to https://aws.amazon.com/jp/premiumsupport/knowledge-center/amazon-eks-cluster-access/
-$ terraform output eks_configmap > ./manifests/config_map.yml
+$ terraform output aws_auth_configmap > ./manifests/awh-auth.yml
 
 $ export KUBECONFIG='.kube/config'
-$ kubectl apply -f manifests/config_map.yml
+$ kubectl apply -f manifests/aws-auth.yml
 
 // Check
 $ kubectl get nodes
