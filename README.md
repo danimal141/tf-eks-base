@@ -35,7 +35,8 @@ $ terraform output kubectl_config > .kube/config
 or
 $ aws eks update-kubeconfig --name ${cluster_name}
 
-// Refer to https://aws.amazon.com/jp/premiumsupport/knowledge-center/amazon-eks-cluster-access/
+// https://aws.amazon.com/premiumsupport/knowledge-center/eks-worker-nodes-cluster/?nc1=h_ls
+// https://aws.amazon.com/jp/premiumsupport/knowledge-center/amazon-eks-cluster-access/
 $ terraform output aws_auth_configmap > ./manifests/awh-auth.yml
 
 $ export KUBECONFIG='.kube/config'
